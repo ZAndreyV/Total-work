@@ -19,3 +19,18 @@ int GetArrayLengthFromUser()
     }
      return lengthArray;
 }
+
+
+string[] CreatArrayRndStr(int len)                      // создаем метод
+{
+    string[] arr = new string[len];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"Enter array element at number {i + 1}: ");
+        string? text = Console.ReadLine();
+        
+        if (text == null) arr[i] = string.Empty;
+        else arr[i] = text;
+    }
+    return arr;                                         // возвращаем результат
+}
