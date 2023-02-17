@@ -49,3 +49,21 @@ void PrintArray(string[] arr)                            // объявляем �
     }
     Console.Write("]");
 }
+
+
+string[] SortArrayStr(string[] arr)
+{
+   string[] arr1 = new string[arr.Length];               // создаем новый массив с такой же длинной
+    for(int i = 0; i < arr.Length; i++)
+    {
+        if(arr[i].Length < length) arr1[i] = arr[i];    // если условия соблюдены, записываем
+    }
+    return arr1;                                         // возврат
+}
+
+string[] arrayStr = CreatArrayRndStr(GetArrayLengthFromUser());
+Console.WriteLine(string.Empty);
+PrintArray(arrayStr);
+Console.Write(" -> ");
+string[] sortArray = SortArrayStr(arrayStr);
+PrintArray(sortArray);
