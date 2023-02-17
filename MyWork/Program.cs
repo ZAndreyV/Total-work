@@ -34,3 +34,18 @@ string[] CreatArrayRndStr(int len)                      // создаем мет
     }
     return arr;                                         // возвращаем результат
 }
+
+
+void PrintArray(string[] arr)                            // объявляем метод
+{
+    Console.Write("[");
+    for(int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] != null)                             // выводим только в случае если массив не пустой
+        {
+            if(i < arr.Length - 1) Console.Write($"\"{arr[i]}\", "); 
+            else Console.Write($"\"{arr[i]}\"");        // последняя строка без запятой
+        }
+    }
+    Console.Write("]");
+}
